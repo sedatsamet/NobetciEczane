@@ -17,7 +17,12 @@
 		0A6B99892944BD1700186F6F /* AnasayfaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6B99882944BD1700186F6F /* AnasayfaViewController.swift */; };
 		0A6B998C2944C33300186F6F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0A6B998B2944C33300186F6F /* Kingfisher */; };
 		0A6B99912944D14A00186F6F /* EczaneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6B998F2944D14A00186F6F /* EczaneTableViewCell.swift */; };
-		0A6B99922944D14A00186F6F /* EczaneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6B99902944D14A00186F6F /* EczaneTableViewCell.xib */; };
+		0AFB8E2C2944ECE9004C57F1 /* AnasayfaProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB8E2B2944ECE9004C57F1 /* AnasayfaProtocols.swift */; };
+		0AFB8E2E2944EDF8004C57F1 /* AnasayfaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB8E2D2944EDF8004C57F1 /* AnasayfaPresenter.swift */; };
+		0AFB8E302944EE71004C57F1 /* AnasayfaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB8E2F2944EE71004C57F1 /* AnasayfaRouter.swift */; };
+		0AFB8E322944EEC0004C57F1 /* AnasayfaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB8E312944EEC0004C57F1 /* AnasayfaInteractor.swift */; };
+		0AFB8E372944FE70004C57F1 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AFB8E362944FE70004C57F1 /* Roboto-Regular.ttf */; };
+		0AFB8E392944FF41004C57F1 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AFB8E382944FF41004C57F1 /* Roboto-Black.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +36,12 @@
 		0A6B997E2944AB8C00186F6F /* SonucModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonucModel.swift; sourceTree = "<group>"; };
 		0A6B99882944BD1700186F6F /* AnasayfaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaViewController.swift; sourceTree = "<group>"; };
 		0A6B998F2944D14A00186F6F /* EczaneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EczaneTableViewCell.swift; sourceTree = "<group>"; };
-		0A6B99902944D14A00186F6F /* EczaneTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EczaneTableViewCell.xib; sourceTree = "<group>"; };
+		0AFB8E2B2944ECE9004C57F1 /* AnasayfaProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaProtocols.swift; sourceTree = "<group>"; };
+		0AFB8E2D2944EDF8004C57F1 /* AnasayfaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaPresenter.swift; sourceTree = "<group>"; };
+		0AFB8E2F2944EE71004C57F1 /* AnasayfaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaRouter.swift; sourceTree = "<group>"; };
+		0AFB8E312944EEC0004C57F1 /* AnasayfaInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaInteractor.swift; sourceTree = "<group>"; };
+		0AFB8E362944FE70004C57F1 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		0AFB8E382944FF41004C57F1 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +83,7 @@
 				0A6B996D2944AA6800186F6F /* Main.storyboard */,
 				0A6B99722944AA6B00186F6F /* LaunchScreen.storyboard */,
 				0A6B99752944AA6B00186F6F /* Info.plist */,
+				0AFB8E352944FE64004C57F1 /* Fonts */,
 			);
 			path = NobetciEczane;
 			sourceTree = "<group>";
@@ -118,6 +129,7 @@
 		0A6B99842944BCCA00186F6F /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				0AFB8E2D2944EDF8004C57F1 /* AnasayfaPresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -125,6 +137,7 @@
 		0A6B99852944BCCF00186F6F /* interactor */ = {
 			isa = PBXGroup;
 			children = (
+				0AFB8E312944EEC0004C57F1 /* AnasayfaInteractor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -132,6 +145,7 @@
 		0A6B99862944BCD800186F6F /* router */ = {
 			isa = PBXGroup;
 			children = (
+				0AFB8E2F2944EE71004C57F1 /* AnasayfaRouter.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -139,6 +153,7 @@
 		0A6B99872944BCDB00186F6F /* protocols */ = {
 			isa = PBXGroup;
 			children = (
+				0AFB8E2B2944ECE9004C57F1 /* AnasayfaProtocols.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -155,9 +170,17 @@
 			isa = PBXGroup;
 			children = (
 				0A6B998F2944D14A00186F6F /* EczaneTableViewCell.swift */,
-				0A6B99902944D14A00186F6F /* EczaneTableViewCell.xib */,
 			);
 			path = tableViewCell;
+			sourceTree = "<group>";
+		};
+		0AFB8E352944FE64004C57F1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0AFB8E362944FE70004C57F1 /* Roboto-Regular.ttf */,
+				0AFB8E382944FF41004C57F1 /* Roboto-Black.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,8 +250,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A6B99742944AA6B00186F6F /* LaunchScreen.storyboard in Resources */,
-				0A6B99922944D14A00186F6F /* EczaneTableViewCell.xib in Resources */,
 				0A6B99712944AA6B00186F6F /* Assets.xcassets in Resources */,
+				0AFB8E392944FF41004C57F1 /* Roboto-Black.ttf in Resources */,
+				0AFB8E372944FE70004C57F1 /* Roboto-Regular.ttf in Resources */,
 				0A6B996F2944AA6800186F6F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,8 +264,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AFB8E2E2944EDF8004C57F1 /* AnasayfaPresenter.swift in Sources */,
 				0A6B997F2944AB8C00186F6F /* SonucModel.swift in Sources */,
+				0AFB8E2C2944ECE9004C57F1 /* AnasayfaProtocols.swift in Sources */,
+				0AFB8E322944EEC0004C57F1 /* AnasayfaInteractor.swift in Sources */,
 				0A6B99682944AA6800186F6F /* AppDelegate.swift in Sources */,
+				0AFB8E302944EE71004C57F1 /* AnasayfaRouter.swift in Sources */,
 				0A6B99892944BD1700186F6F /* AnasayfaViewController.swift in Sources */,
 				0A6B996A2944AA6800186F6F /* SceneDelegate.swift in Sources */,
 				0A6B99912944D14A00186F6F /* EczaneTableViewCell.swift in Sources */,

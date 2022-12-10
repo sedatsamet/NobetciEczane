@@ -9,11 +9,11 @@ import Foundation
 
 struct SonucModel: Codable {
     let success: Bool
-    let result: [Result]
+    let result: [Result]?
 }
 
 // MARK: - Result
 struct Result: Codable {
-    let name, dist, address, phone: String
-    let loc: String
+    let name, dist, address, phone: String?
+    let loc: String?
 }

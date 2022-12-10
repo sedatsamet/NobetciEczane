@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class EczaneTableViewCell: UITableViewCell {
     
@@ -29,9 +30,9 @@ class EczaneTableViewCell: UITableViewCell {
     
     func setupCell(eczane:Result) {
         self.eczaneImageView.kf.setImage(with: self.eczaneGifUrl)
-        eczaneAdLabel.text = eczane.name
-        eczaneIlceLabel.text = eczane.dist
-        eczaneAdresLabel.text = eczane.address
+        self.eczaneAdLabel.text = "\(eczane.name!) ECZANESİ"
+        self.eczaneIlceLabel.text = "İLÇE: \(eczane.dist!)"
+        self.eczaneAdresLabel.text = "ADRES: \(eczane.address!)"
     }
     
 }
