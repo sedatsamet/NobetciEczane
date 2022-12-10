@@ -18,10 +18,23 @@ class AnasayfaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        showCurrentDay()
         setupTableView()
-        navigationSetup()
+        setupNavigationBar()
+        
         AnasayfaRouter.createModule(ref: self)
+    }
+    
+    private func showCurrentDay(){
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMMM"
+        formatter.timeZone = TimeZone(abbreviation: "UTC+3")!
+        formatter.locale = Locale(identifier: "tr-TR")
+        
+        let utcTimeZoneStr = formatter.string(from: date)
+        tarihLabel.text = "\(utcTimeZoneStr) Tarihli Nöbetçi Eczaneler"
     }
     
     private func setupTableView(){
@@ -31,7 +44,7 @@ class AnasayfaViewController: UIViewController {
         tableView.separatorStyle = .singleLine
     }
     
-    private func navigationSetup(){
+    private func setupNavigationBar(){
         self.navigationItem.title = "Nöbetçi Eczane Ara"
         
         let appearance = UINavigationBarAppearance()

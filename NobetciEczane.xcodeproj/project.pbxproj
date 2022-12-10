@@ -94,6 +94,7 @@
 		0A6B99802944BC7A00186F6F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0AFB8E3D29450CA0004C57F1 /* detay-module */,
 				0A6B99812944BC9000186F6F /* anasayfa-module */,
 			);
 			path = Modules;
@@ -192,6 +193,53 @@
 				0AFB8E3B294503CC004C57F1 /* String+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0AFB8E3D29450CA0004C57F1 /* detay-module */ = {
+			isa = PBXGroup;
+			children = (
+				0AFB8E4229450CC0004C57F1 /* protocols */,
+				0AFB8E4129450CBC004C57F1 /* router */,
+				0AFB8E4029450CB7004C57F1 /* interactor */,
+				0AFB8E3F29450CB1004C57F1 /* presenter */,
+				0AFB8E3E29450CAD004C57F1 /* view */,
+			);
+			path = "detay-module";
+			sourceTree = "<group>";
+		};
+		0AFB8E3E29450CAD004C57F1 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		0AFB8E3F29450CB1004C57F1 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		0AFB8E4029450CB7004C57F1 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		0AFB8E4129450CBC004C57F1 /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		0AFB8E4229450CC0004C57F1 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
