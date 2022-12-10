@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tgo-Xn-PQS">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Nöbetçi Eczane Ara-->
+        <scene sceneID="JuH-NH-QJa">
+            <objects>
+                <viewController id="Co1-5U-DDq" customClass="AnasayfaViewController" customModule="NobetciEczane" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gmb-yf-trY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Uw3-BZ-8KL">
+                                <rect key="frame" x="0.0" y="177" width="393" height="675"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <sections/>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Şehir Ara" translatesAutoresizingMaskIntoConstraints="NO" id="0yl-cF-wXy">
+                                <rect key="frame" x="0.0" y="103" width="342" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Myx-x2-2lI">
+                                <rect key="frame" x="342" y="113.66666666666669" width="51" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Ara"/>
+                                <connections>
+                                    <action selector="araButtonClicked:" destination="Co1-5U-DDq" eventType="touchUpInside" id="FNs-0F-qFr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Aralık Tarihi İçin Nöbetçi Eczaneler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utb-Wb-YSb">
+                                <rect key="frame" x="0.0" y="159" width="393" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pCT-6P-jzA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Utb-Wb-YSb" firstAttribute="leading" secondItem="pCT-6P-jzA" secondAttribute="leading" id="5OD-LT-LgH"/>
+                            <constraint firstItem="Utb-Wb-YSb" firstAttribute="trailing" secondItem="pCT-6P-jzA" secondAttribute="trailing" id="85R-Jt-eG0"/>
+                            <constraint firstAttribute="bottom" secondItem="Uw3-BZ-8KL" secondAttribute="bottom" id="QGp-jU-Sbe"/>
+                            <constraint firstItem="0yl-cF-wXy" firstAttribute="leading" secondItem="pCT-6P-jzA" secondAttribute="leading" id="T1e-JD-ML4"/>
+                            <constraint firstItem="Myx-x2-2lI" firstAttribute="leading" secondItem="0yl-cF-wXy" secondAttribute="trailing" id="XEs-Jd-Yjf"/>
+                            <constraint firstItem="0yl-cF-wXy" firstAttribute="top" secondItem="pCT-6P-jzA" secondAttribute="top" id="d33-vs-Uo1"/>
+                            <constraint firstItem="Utb-Wb-YSb" firstAttribute="top" secondItem="0yl-cF-wXy" secondAttribute="bottom" id="d5L-uR-vLq"/>
+                            <constraint firstItem="Myx-x2-2lI" firstAttribute="trailing" secondItem="pCT-6P-jzA" secondAttribute="trailing" id="gcf-wX-njW"/>
+                            <constraint firstItem="Uw3-BZ-8KL" firstAttribute="top" secondItem="Utb-Wb-YSb" secondAttribute="bottom" id="kbh-sv-Bau"/>
+                            <constraint firstItem="Uw3-BZ-8KL" firstAttribute="trailing" secondItem="pCT-6P-jzA" secondAttribute="trailing" id="pJs-eN-v5G"/>
+                            <constraint firstItem="Myx-x2-2lI" firstAttribute="centerY" secondItem="0yl-cF-wXy" secondAttribute="centerY" id="rwq-be-zA7"/>
+                            <constraint firstItem="Uw3-BZ-8KL" firstAttribute="leading" secondItem="pCT-6P-jzA" secondAttribute="leading" id="znl-Bi-d5l"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nöbetçi Eczane Ara" id="m6q-ka-ShQ">
+                        <barButtonItem key="backBarButtonItem" title="Geri" id="KEA-o0-fVB"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="0yl-cF-wXy" id="18t-9W-A3n"/>
+                        <outlet property="tableView" destination="Uw3-BZ-8KL" id="Z9j-20-lYl"/>
+                        <outlet property="tarihLabel" destination="Utb-Wb-YSb" id="UOL-2I-ZWt"/>
+                        <segue destination="chB-vl-Xfd" kind="show" id="XfO-CM-FGT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T6L-B7-yQB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1327.4809160305342" y="-487.32394366197184"/>
+        </scene>
+        <!--Nöbetçi Eczane-->
+        <scene sceneID="YWz-e5-VvN">
+            <objects>
+                <viewController id="chB-vl-Xfd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qj4-cU-LZV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Cc-E1-YFR">
+                                <rect key="frame" x="132.66666666666666" y="128" width="127.99999999999997" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="NCf-ef-hMV"/>
+                                    <constraint firstAttribute="height" constant="128" id="b96-3a-5cR"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eczane Adı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqN-sW-dhe">
+                                <rect key="frame" x="46.666666666666657" y="281" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CBh-ei-1TZ"/>
+                                    <constraint firstAttribute="width" constant="300" id="vtj-MQ-tPX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5k6-mk-a57" userLabel="Telefon Stack View">
+                                <rect key="frame" x="105.33333333333333" y="381.33333333333331" width="182.33333333333337" height="24"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="Drk-U1-hyA">
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="2aq-nr-r7k"/>
+                                            <constraint firstAttribute="width" constant="24" id="dBo-4u-FO3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 (282) 262 45 15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPm-qE-hbS">
+                                        <rect key="frame" x="44.000000000000014" y="0.0" width="138.33333333333337" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6Oa-NF-ODD" userLabel="Adres Stack View">
+                                <rect key="frame" x="46.666666666666657" y="430.33333333333331" width="300" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="AWz-3O-JDu">
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="uwX-pc-O05"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="ESKİCAMİ-ORTACAMİ MAH.HASTANE SOK.NO:42/A" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wA-H4-pvw">
+                                        <rect key="frame" x="34" y="0.0" width="266" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="ooz-kS-3Af"/>
+                                    <constraint firstAttribute="height" constant="50" id="u5k-wk-AMS"/>
+                                </constraints>
+                            </stackView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFh-zA-qGn">
+                                <rect key="frame" x="0.0" y="480.33333333333326" width="393" height="371.66666666666674"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İlçe Adı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqg-W8-22B">
+                                <rect key="frame" x="46.666666666666657" y="336" width="300" height="20.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="vaO-G3-mHC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Uh5-Ak-alK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aqg-W8-22B" firstAttribute="top" secondItem="eqN-sW-dhe" secondAttribute="bottom" constant="25" id="2AW-4o-3gh"/>
+                            <constraint firstItem="eqN-sW-dhe" firstAttribute="centerX" secondItem="1Cc-E1-YFR" secondAttribute="centerX" id="4Pg-YB-Yus"/>
+                            <constraint firstItem="AFh-zA-qGn" firstAttribute="top" secondItem="6Oa-NF-ODD" secondAttribute="bottom" id="6TC-sf-m7H"/>
+                            <constraint firstItem="1Cc-E1-YFR" firstAttribute="centerX" secondItem="qj4-cU-LZV" secondAttribute="centerX" id="8Ka-vm-pOn"/>
+                            <constraint firstItem="6Oa-NF-ODD" firstAttribute="centerX" secondItem="5k6-mk-a57" secondAttribute="centerX" id="C5h-g9-TYi"/>
+                            <constraint firstItem="eqN-sW-dhe" firstAttribute="top" secondItem="1Cc-E1-YFR" secondAttribute="bottom" constant="25" id="EID-1y-HFM"/>
+                            <constraint firstItem="aqg-W8-22B" firstAttribute="centerX" secondItem="eqN-sW-dhe" secondAttribute="centerX" id="W8n-VT-Jzw"/>
+                            <constraint firstItem="AFh-zA-qGn" firstAttribute="leading" secondItem="Uh5-Ak-alK" secondAttribute="leading" id="WhP-VO-dZK"/>
+                            <constraint firstItem="AFh-zA-qGn" firstAttribute="trailing" secondItem="Uh5-Ak-alK" secondAttribute="trailing" id="Zhv-JX-7oE"/>
+                            <constraint firstItem="6Oa-NF-ODD" firstAttribute="top" secondItem="5k6-mk-a57" secondAttribute="bottom" constant="25" id="jWK-vh-6tG"/>
+                            <constraint firstAttribute="bottom" secondItem="AFh-zA-qGn" secondAttribute="bottom" id="noR-D9-CXf"/>
+                            <constraint firstItem="1Cc-E1-YFR" firstAttribute="top" secondItem="Uh5-Ak-alK" secondAttribute="top" constant="25" id="rqr-qF-PeZ"/>
+                            <constraint firstItem="5k6-mk-a57" firstAttribute="top" secondItem="aqg-W8-22B" secondAttribute="bottom" constant="25" id="tN1-MD-N4S"/>
+                            <constraint firstItem="5k6-mk-a57" firstAttribute="centerX" secondItem="eqN-sW-dhe" secondAttribute="centerX" id="zqB-Hu-39r"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nöbetçi Eczane" id="H7m-dA-TWY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VqS-aX-vNF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-402.29007633587787" y="-487.32394366197184"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="d6P-Zy-SGT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tgo-Xn-PQS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SlH-rx-OTY">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Co1-5U-DDq" kind="relationship" relationship="rootViewController" id="Rit-D4-WVQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CUd-jU-Ii5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2254.1984732824426" y="-487.32394366197184"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="location" width="59.509998321533203" height="59.509998321533203"/>
+        <image name="phone" width="64" height="64"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
