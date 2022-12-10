@@ -24,6 +24,7 @@
 		0AFB8E372944FE70004C57F1 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AFB8E362944FE70004C57F1 /* Roboto-Regular.ttf */; };
 		0AFB8E392944FF41004C57F1 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AFB8E382944FF41004C57F1 /* Roboto-Black.ttf */; };
 		0AFB8E3C294503CC004C57F1 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB8E3B294503CC004C57F1 /* String+Ext.swift */; };
+		0AFB8E452945228C004C57F1 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB8E442945228C004C57F1 /* UIView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		0AFB8E362944FE70004C57F1 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		0AFB8E382944FF41004C57F1 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		0AFB8E3B294503CC004C57F1 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		0AFB8E442945228C004C57F1 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				0AFB8E3B294503CC004C57F1 /* String+Ext.swift */,
+				0AFB8E442945228C004C57F1 /* UIView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AFB8E2E2944EDF8004C57F1 /* AnasayfaPresenter.swift in Sources */,
+				0AFB8E452945228C004C57F1 /* UIView+Ext.swift in Sources */,
 				0A6B997F2944AB8C00186F6F /* SonucModel.swift in Sources */,
 				0AFB8E2C2944ECE9004C57F1 /* AnasayfaProtocols.swift in Sources */,
 				0AFB8E322944EEC0004C57F1 /* AnasayfaInteractor.swift in Sources */,

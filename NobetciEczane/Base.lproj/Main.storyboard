@@ -9,8 +9,13 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Black.ttf">
+            <string>Roboto-Black</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Nöbetçi Eczane Ara-->
+        <!--Anasayfa View Controller-->
         <scene sceneID="JuH-NH-QJa">
             <objects>
                 <viewController id="Co1-5U-DDq" customClass="AnasayfaViewController" customModule="NobetciEczane" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,8 +23,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXB-uM-utI">
+                                <rect key="frame" x="38.666666666666657" y="184" width="316" height="43"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Aralık Tarihi İçin Nöbetçi Eczaneler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utb-Wb-YSb">
+                                        <rect key="frame" x="20.666666666666657" y="12.666666666666657" width="274.33333333333337" height="18"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstItem="Utb-Wb-YSb" firstAttribute="centerY" secondItem="cXB-uM-utI" secondAttribute="centerY" id="1GW-f1-Z6r"/>
+                                    <constraint firstAttribute="width" constant="316" id="aXp-Tm-GXB"/>
+                                    <constraint firstAttribute="height" constant="43" id="mPi-89-IyX"/>
+                                    <constraint firstItem="Utb-Wb-YSb" firstAttribute="centerX" secondItem="cXB-uM-utI" secondAttribute="centerX" id="pIR-uf-RHR"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Uw3-BZ-8KL">
-                                <rect key="frame" x="0.0" y="177" width="393" height="675"/>
+                                <rect key="frame" x="0.0" y="232" width="393" height="620"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EczaneTableViewCell" rowHeight="180" id="o0m-fg-Nga" customClass="EczaneTableViewCell" customModule="NobetciEczane" customModuleProvider="target">
@@ -30,55 +56,55 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="82L-2F-V73">
-                                                    <rect key="frame" x="20" y="20" width="80" height="80"/>
+                                                    <rect key="frame" x="20" y="50" width="80" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="Qf5-L9-Uo0"/>
                                                         <constraint firstAttribute="width" constant="80" id="gaa-4c-kH4"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eczane Adı" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6o-zX-eCh">
-                                                    <rect key="frame" x="120" y="20" width="233" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="200" id="9Sj-8x-JrO"/>
-                                                        <constraint firstAttribute="height" constant="50" id="CiG-08-u9u"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" systemColor="systemRedColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İlçe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7N-EJ-Kd6">
-                                                    <rect key="frame" x="120" y="80" width="233" height="20"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="200" id="eev-F1-APg"/>
-                                                        <constraint firstAttribute="height" constant="20" id="jLU-82-qsJ"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" systemColor="systemRedColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deu-h7-VJW">
-                                                    <rect key="frame" x="120" y="120" width="233" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="LbN-Da-sGY"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                    <color key="textColor" systemColor="systemRedColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Mi-Xj-5bi" userLabel="Info Stack View">
+                                                    <rect key="frame" x="120" y="24.666666666666671" width="238" height="131"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eczane Adı" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6o-zX-eCh">
+                                                            <rect key="frame" x="0.0" y="0.0" width="238" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="200" id="9Sj-8x-JrO"/>
+                                                                <constraint firstAttribute="height" constant="50" id="CiG-08-u9u"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <color key="textColor" systemColor="systemRedColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İlçe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7N-EJ-Kd6">
+                                                            <rect key="frame" x="0.0" y="70" width="238" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="200" id="eev-F1-APg"/>
+                                                                <constraint firstAttribute="height" constant="20" id="jLU-82-qsJ"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <color key="textColor" systemColor="systemRedColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deu-h7-VJW">
+                                                            <rect key="frame" x="0.0" y="109.99999999999999" width="238" height="21.000000000000014"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="LbN-Da-sGY"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                            <color key="textColor" systemColor="systemRedColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="D7N-EJ-Kd6" secondAttribute="trailing" constant="20" id="5Qk-Tn-PIx"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="deu-h7-VJW" secondAttribute="trailing" constant="20" id="95K-7j-qcj"/>
-                                                <constraint firstItem="o6o-zX-eCh" firstAttribute="top" secondItem="82L-2F-V73" secondAttribute="top" id="9XC-Li-1If"/>
-                                                <constraint firstItem="D7N-EJ-Kd6" firstAttribute="top" secondItem="o6o-zX-eCh" secondAttribute="bottom" constant="20" id="Bet-K3-TVc"/>
+                                                <constraint firstItem="0Mi-Xj-5bi" firstAttribute="centerY" secondItem="82L-2F-V73" secondAttribute="centerY" id="I58-uj-Bvi"/>
                                                 <constraint firstItem="82L-2F-V73" firstAttribute="leading" secondItem="Ixd-hS-nm7" secondAttribute="leading" constant="20" id="ML1-9M-wJu"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="o6o-zX-eCh" secondAttribute="trailing" constant="20" id="YNv-NZ-Cfb"/>
-                                                <constraint firstItem="D7N-EJ-Kd6" firstAttribute="leading" secondItem="o6o-zX-eCh" secondAttribute="leading" id="bHV-sh-ecm"/>
-                                                <constraint firstItem="82L-2F-V73" firstAttribute="top" secondItem="Ixd-hS-nm7" secondAttribute="top" constant="20" id="dQc-wC-FN2"/>
-                                                <constraint firstItem="deu-h7-VJW" firstAttribute="leading" secondItem="D7N-EJ-Kd6" secondAttribute="leading" id="hLh-1D-fLK"/>
-                                                <constraint firstItem="o6o-zX-eCh" firstAttribute="leading" secondItem="82L-2F-V73" secondAttribute="trailing" constant="20" id="iQ4-B1-Wck"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="deu-h7-VJW" secondAttribute="bottom" constant="28" id="kt4-MP-9qx"/>
-                                                <constraint firstItem="deu-h7-VJW" firstAttribute="top" secondItem="D7N-EJ-Kd6" secondAttribute="bottom" constant="20" id="pyW-MO-2Tc"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="82L-2F-V73" secondAttribute="bottom" constant="39" id="QMw-ke-o6f"/>
+                                                <constraint firstItem="82L-2F-V73" firstAttribute="top" secondItem="Ixd-hS-nm7" secondAttribute="topMargin" constant="39" id="a3Z-Ha-2KM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0Mi-Xj-5bi" secondAttribute="trailing" constant="15" id="n78-bA-cc2"/>
+                                                <constraint firstItem="82L-2F-V73" firstAttribute="centerY" secondItem="Ixd-hS-nm7" secondAttribute="centerY" id="nM5-am-0DI"/>
+                                                <constraint firstItem="0Mi-Xj-5bi" firstAttribute="leading" secondItem="82L-2F-V73" secondAttribute="trailing" constant="20" id="ohm-4D-6SN"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -92,52 +118,83 @@
                                 <sections/>
                             </tableView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Şehir Ara" translatesAutoresizingMaskIntoConstraints="NO" id="0yl-cF-wXy">
-                                <rect key="frame" x="0.0" y="103" width="342" height="56"/>
+                                <rect key="frame" x="0.0" y="118" width="258" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
                                     <string>Title</string>
                                 </scopeButtonTitles>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Myx-x2-2lI">
-                                <rect key="frame" x="342" y="113.66666666666669" width="51" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Ara"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Myx-x2-2lI">
+                                <rect key="frame" x="273" y="126" width="100" height="40"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Lrt-zl-cbH"/>
+                                    <constraint firstAttribute="width" constant="100" id="dX6-Th-p5f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="22"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Ara">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="araButtonClicked:" destination="Co1-5U-DDq" eventType="touchUpInside" id="FNs-0F-qFr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Aralık Tarihi İçin Nöbetçi Eczaneler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utb-Wb-YSb">
-                                <rect key="frame" x="0.0" y="159" width="393" height="18"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tv-QV-btd">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="103"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nöbetçi Eczane Ara" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHT-aU-wQY">
+                                        <rect key="frame" x="46.666666666666657" y="65" width="300" height="23"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="68V-df-a5i"/>
+                                            <constraint firstAttribute="height" constant="23" id="Hj1-dt-fNw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstItem="XHT-aU-wQY" firstAttribute="centerX" secondItem="3tv-QV-btd" secondAttribute="centerX" id="PGO-i7-iNi"/>
+                                    <constraint firstAttribute="bottom" secondItem="XHT-aU-wQY" secondAttribute="bottom" constant="15" id="RDU-uT-3Rz"/>
+                                    <constraint firstAttribute="height" constant="103" id="eE7-ds-7M0"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pCT-6P-jzA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Utb-Wb-YSb" firstAttribute="leading" secondItem="pCT-6P-jzA" secondAttribute="leading" id="5OD-LT-LgH"/>
-                            <constraint firstItem="Utb-Wb-YSb" firstAttribute="trailing" secondItem="pCT-6P-jzA" secondAttribute="trailing" id="85R-Jt-eG0"/>
+                            <constraint firstItem="Myx-x2-2lI" firstAttribute="leading" secondItem="0yl-cF-wXy" secondAttribute="trailing" constant="15" id="14A-rI-mBP"/>
+                            <constraint firstItem="cXB-uM-utI" firstAttribute="centerX" secondItem="Gmb-yf-trY" secondAttribute="centerX" id="A3D-a8-7eG"/>
+                            <constraint firstItem="cXB-uM-utI" firstAttribute="top" secondItem="0yl-cF-wXy" secondAttribute="bottom" constant="10" id="Cay-nh-aMY"/>
+                            <constraint firstItem="pCT-6P-jzA" firstAttribute="trailing" secondItem="Myx-x2-2lI" secondAttribute="trailing" constant="20" id="Eq2-3E-fzG"/>
                             <constraint firstAttribute="bottom" secondItem="Uw3-BZ-8KL" secondAttribute="bottom" id="QGp-jU-Sbe"/>
                             <constraint firstItem="0yl-cF-wXy" firstAttribute="leading" secondItem="pCT-6P-jzA" secondAttribute="leading" id="T1e-JD-ML4"/>
-                            <constraint firstItem="Myx-x2-2lI" firstAttribute="leading" secondItem="0yl-cF-wXy" secondAttribute="trailing" id="XEs-Jd-Yjf"/>
-                            <constraint firstItem="0yl-cF-wXy" firstAttribute="top" secondItem="pCT-6P-jzA" secondAttribute="top" id="d33-vs-Uo1"/>
-                            <constraint firstItem="Utb-Wb-YSb" firstAttribute="top" secondItem="0yl-cF-wXy" secondAttribute="bottom" id="d5L-uR-vLq"/>
-                            <constraint firstItem="Myx-x2-2lI" firstAttribute="trailing" secondItem="pCT-6P-jzA" secondAttribute="trailing" id="gcf-wX-njW"/>
-                            <constraint firstItem="Uw3-BZ-8KL" firstAttribute="top" secondItem="Utb-Wb-YSb" secondAttribute="bottom" id="kbh-sv-Bau"/>
+                            <constraint firstItem="3tv-QV-btd" firstAttribute="top" secondItem="Gmb-yf-trY" secondAttribute="top" id="UI6-qO-nfy"/>
+                            <constraint firstAttribute="trailing" secondItem="3tv-QV-btd" secondAttribute="trailing" id="jVk-FN-AMm"/>
+                            <constraint firstItem="Uw3-BZ-8KL" firstAttribute="top" secondItem="cXB-uM-utI" secondAttribute="bottom" constant="5" id="mFU-GY-xCD"/>
                             <constraint firstItem="Uw3-BZ-8KL" firstAttribute="trailing" secondItem="pCT-6P-jzA" secondAttribute="trailing" id="pJs-eN-v5G"/>
                             <constraint firstItem="Myx-x2-2lI" firstAttribute="centerY" secondItem="0yl-cF-wXy" secondAttribute="centerY" id="rwq-be-zA7"/>
+                            <constraint firstItem="3tv-QV-btd" firstAttribute="leading" secondItem="Gmb-yf-trY" secondAttribute="leading" id="wo0-y2-NvK"/>
+                            <constraint firstItem="0yl-cF-wXy" firstAttribute="top" secondItem="3tv-QV-btd" secondAttribute="bottom" constant="15" id="xvx-ZO-MXA"/>
                             <constraint firstItem="Uw3-BZ-8KL" firstAttribute="leading" secondItem="pCT-6P-jzA" secondAttribute="leading" id="znl-Bi-d5l"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Nöbetçi Eczane Ara" id="m6q-ka-ShQ">
+                    <navigationItem key="navigationItem" id="m6q-ka-ShQ">
                         <barButtonItem key="backBarButtonItem" title="Geri" id="KEA-o0-fVB"/>
                     </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="0yl-cF-wXy" id="18t-9W-A3n"/>
                         <outlet property="tableView" destination="Uw3-BZ-8KL" id="Z9j-20-lYl"/>
+                        <outlet property="tarihBackGround" destination="cXB-uM-utI" id="mrS-T6-Ek7"/>
                         <outlet property="tarihLabel" destination="Utb-Wb-YSb" id="UOL-2I-ZWt"/>
+                        <outlet property="topView" destination="3tv-QV-btd" id="Ig2-BQ-o2J"/>
                         <segue destination="chB-vl-Xfd" kind="show" id="XfO-CM-FGT"/>
                     </connections>
                 </viewController>

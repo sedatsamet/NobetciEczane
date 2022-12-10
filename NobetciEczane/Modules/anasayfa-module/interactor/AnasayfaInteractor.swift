@@ -12,7 +12,9 @@ class AnasayfaInteractor : PresenterToInteractorAnasayfaProtocol {
     var anasayfaPresenter: InteractorToPresenterAnasayfaProtocol?
     
     func eczaneAra(ilText: String) {
-        let headers: HTTPHeaders = ["Authorization":"apikey 6gd8WZyEtkuXKUWsL8tzcf:0R3rz7mIbNbTvLyJojOsDR",
+        let apikey1 = "apikey 6gd8WZyEtkuXKUWsL8tzcf:0R3rz7mIbNbTvLyJojOsDR"
+        let apikey2 = "apikey 67guuWMLeyGwxxIp9yoB2G:3eosbzICk4rU5ZaeCIumwD"
+        let headers: HTTPHeaders = ["Authorization":"\(apikey2)",
                                     "Content-Type":"application/json"]
         //let params:Parameters = ["il":ilText,"ilce":ilceText]
         let params:Parameters = ["il":ilText]

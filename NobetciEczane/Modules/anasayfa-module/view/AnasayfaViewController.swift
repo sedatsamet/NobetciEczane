@@ -12,6 +12,8 @@ class AnasayfaViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tarihLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tarihBackGround: UIView!
+    @IBOutlet weak var topView: UIView!
     
     private var eczaneListesi = [Result]()
     var anasayfaPresenterDelegate : ViewToPresenterAnasayfaProtocol?
@@ -24,6 +26,7 @@ class AnasayfaViewController: UIViewController {
         setupNavigationBar()
         
         AnasayfaRouter.createModule(ref: self)
+        tarihBackGround.isHidden = true
     }
     
     private func showCurrentDay(){
@@ -45,16 +48,19 @@ class AnasayfaViewController: UIViewController {
     }
     
     private func setupNavigationBar(){
+        self.navigationController?.isNavigationBarHidden = true
+        self.topView.roundBottomCorners(radius: 20)
+        /*
         self.navigationItem.title = "Nöbetçi Eczane Ara"
-        
         let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = UIColor.white
-        appearance.titleTextAttributes = [.foregroundColor:UIColor.red, .font:UIFont(name: "Roboto-Black", size: 25)!]
-        
+        appearance.backgroundColor = UIColor.systemRed
+        appearance.titleTextAttributes = [.foregroundColor:UIColor.white, .font:UIFont(name: "Roboto-Black", size: 25)!]
+
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        */
     }
     
     @IBAction func araButtonClicked(_ sender: Any) {
@@ -67,6 +73,11 @@ class AnasayfaViewController: UIViewController {
 // MARK: Reloading Data with Search Response
 extension AnasayfaViewController : PresenterToViewAnasayfaProtocol {
     func vieweVeriGonder(eczaneListesi: [Result]) {
+        if !eczaneListesi.isEmpty {
+            self.tarihBackGround.isHidden = false
+        }else{
+            self.tarihBackGround.isHidden = true
+        }
         self.eczaneListesi = eczaneListesi
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -87,5 +98,9 @@ extension AnasayfaViewController : UITableViewDelegate, UITableViewDataSource {
             cell.setupCell(eczane: eczane)
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
