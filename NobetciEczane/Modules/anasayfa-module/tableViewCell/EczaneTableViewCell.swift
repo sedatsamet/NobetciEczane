@@ -13,9 +13,10 @@ class EczaneTableViewCell: UITableViewCell {
     @IBOutlet weak var eczaneImageView: UIImageView!
     @IBOutlet weak var eczaneAdLabel: UILabel!
     @IBOutlet weak var eczaneIlceLabel: UILabel!
-    @IBOutlet weak var eczaneAdresLabel: UILabel!
+    @IBOutlet weak var eczaneTelefonLabel: UILabel!
     
     private let eczaneGifUrl = URL(string: "https://www.amasyaeo.org.tr/wp-content/themes/gambit/images/eczane.gif")
+    private var counter : Int = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,7 +33,12 @@ class EczaneTableViewCell: UITableViewCell {
         self.eczaneImageView.kf.setImage(with: self.eczaneGifUrl)
         self.eczaneAdLabel.text = "\(eczane.name!) ECZANESİ"
         self.eczaneIlceLabel.text = "İLÇE: \(eczane.dist!)"
-        self.eczaneAdresLabel.text = "ADRES: \(eczane.address!)"
+        self.eczaneTelefonLabel.text = "Telefon: 0 \(telefonAlanKoduAyır(telefon: eczane.phone!))"
+    }
+    
+    func telefonAlanKoduAyır(telefon:String) -> String {
+        let formattedPhoneNumber = telefon.applyPatternOnNumbers(pattern: "(###) ###-##-##", replacementCharacter: "#")
+        return formattedPhoneNumber
     }
     
 }

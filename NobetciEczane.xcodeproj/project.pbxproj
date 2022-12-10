@@ -23,6 +23,7 @@
 		0AFB8E322944EEC0004C57F1 /* AnasayfaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB8E312944EEC0004C57F1 /* AnasayfaInteractor.swift */; };
 		0AFB8E372944FE70004C57F1 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AFB8E362944FE70004C57F1 /* Roboto-Regular.ttf */; };
 		0AFB8E392944FF41004C57F1 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AFB8E382944FF41004C57F1 /* Roboto-Black.ttf */; };
+		0AFB8E3C294503CC004C57F1 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB8E3B294503CC004C57F1 /* String+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		0AFB8E312944EEC0004C57F1 /* AnasayfaInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaInteractor.swift; sourceTree = "<group>"; };
 		0AFB8E362944FE70004C57F1 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		0AFB8E382944FF41004C57F1 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		0AFB8E3B294503CC004C57F1 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,14 +78,15 @@
 		0A6B99662944AA6800186F6F /* NobetciEczane */ = {
 			isa = PBXGroup;
 			children = (
-				0A6B998D2944CF2F00186F6F /* Assets */,
-				0A6B99802944BC7A00186F6F /* Modules */,
+				0AFB8E3A2945039D004C57F1 /* Extensions */,
 				0A6B99672944AA6800186F6F /* AppDelegate.swift */,
 				0A6B99692944AA6800186F6F /* SceneDelegate.swift */,
 				0A6B996D2944AA6800186F6F /* Main.storyboard */,
 				0A6B99722944AA6B00186F6F /* LaunchScreen.storyboard */,
-				0A6B99752944AA6B00186F6F /* Info.plist */,
+				0A6B998D2944CF2F00186F6F /* Assets */,
+				0A6B99802944BC7A00186F6F /* Modules */,
 				0AFB8E352944FE64004C57F1 /* Fonts */,
+				0A6B99752944AA6B00186F6F /* Info.plist */,
 			);
 			path = NobetciEczane;
 			sourceTree = "<group>";
@@ -183,6 +186,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		0AFB8E3A2945039D004C57F1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0AFB8E3B294503CC004C57F1 /* String+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -272,6 +283,7 @@
 				0AFB8E302944EE71004C57F1 /* AnasayfaRouter.swift in Sources */,
 				0A6B99892944BD1700186F6F /* AnasayfaViewController.swift in Sources */,
 				0A6B996A2944AA6800186F6F /* SceneDelegate.swift in Sources */,
+				0AFB8E3C294503CC004C57F1 /* String+Ext.swift in Sources */,
 				0A6B99912944D14A00186F6F /* EczaneTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
